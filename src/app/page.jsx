@@ -4,10 +4,10 @@ import Image from "next/image";
 
 const Home = () => {
   return (
-    <div className="flex gap-3  ">
+    <div className="flex justify-between  gap-3  items-center">
       {/* text container */}
-      <div className=" w-[50%] flex flex-col gap-12 ">
-        <h1 className=" text-8xl font-semibold">Creative Thoughts Agency</h1>
+      <div className=" w-[50%] flex flex-col gap-5">
+        <h1 className=" text-6xl font-semibold">Creative Thoughts Agency</h1>
 
         <p className=" text-sm ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut pariatur
