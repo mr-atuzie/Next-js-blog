@@ -117,7 +117,7 @@ const Navbar = () => {
         </div>
 
         {/* RIGHT */}
-        <div>
+        <div className=" flex items-center">
           <ClerkLoading>
             <div role="status">
               <svg
