@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -14,11 +15,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
-        <div className=" w-[90%] lg:w-[80%] mx-auto">{children}</div>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <Navbar />
+          <div className=" w-[90%] lg:w-[80%] mx-auto ">{children}</div>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
