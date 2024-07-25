@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body className={inter.className}>
           <Navbar />
-          <div className=" w-[90%] lg:w-[80%] mx-auto ">{children}</div>
+          <div className=" w-[95%] lg:w-[85%] mx-auto ">{children}</div>
         </body>
       </html>
     </ClerkProvider>
