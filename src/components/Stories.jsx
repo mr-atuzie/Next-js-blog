@@ -11,15 +11,16 @@ const Stories = () => {
               key={story}
               className=" flex flex-col items-center gap-2 cursor-pointer "
             >
-              <Image
-                src={
-                  "https://images.pexels.com/photos/7016662/pexels-photo-7016662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                }
-                alt=""
-                width={56}
-                height={56}
-                className=" w-16 rounded-full ring-2 h-16"
-              />
+              <div className=" relative w-16 h-16">
+                <Image
+                  src={
+                    "https://images.pexels.com/photos/15057524/pexels-photo-15057524/free-photo-of-group-of-cheerful-friends.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                  }
+                  alt=""
+                  fill
+                  className=" object-cover rounded-full ring-2"
+                />
+              </div>
               <span className="font-medium">Marvin</span>
             </div>
           );
