@@ -14,7 +14,7 @@ const Stories = () => {
               <div className=" relative w-16 h-16">
                 <Image
                   src={
-                    "https://images.pexels.com/photos/15057524/pexels-photo-15057524/free-photo-of-group-of-cheerful-friends.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    "https://images.pexels.com/photos/22873531/pexels-photo-22873531/free-photo-of-surfers-going-into-the-sea.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
                   }
                   alt=""
                   fill

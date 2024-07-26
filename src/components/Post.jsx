@@ -7,15 +7,16 @@ const Post = () => {
     <div className=" flex flex-col gap-4">
       <div className=" flex items-center justify-between">
         <div className=" flex items-center gap-4">
-          <Image
-            src={
-              "https://images.pexels.com/photos/18582529/pexels-photo-18582529/free-photo-of-a-man-is-working-on-a-statue-in-a-workshop.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-            }
-            alt=""
-            width={40}
-            height={40}
-            className=" w-10 rounded-full   h-10"
-          />
+          <div className=" relative w-10 h-10">
+            <Image
+              src={
+                "https://images.pexels.com/photos/18582529/pexels-photo-18582529/free-photo-of-a-man-is-working-on-a-statue-in-a-workshop.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              }
+              alt=""
+              fill
+              className="  rounded-full"
+            />
+          </div>
 
           <p className=" font-medium">Jack Dorsey</p>
         </div>
