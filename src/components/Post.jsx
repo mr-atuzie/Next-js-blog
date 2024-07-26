@@ -14,7 +14,7 @@ const Post = () => {
               }
               alt=""
               fill
-              className="  rounded-full"
+              className=" object-cover  rounded-full"
             />
           </div>
 
