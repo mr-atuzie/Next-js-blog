@@ -5,7 +5,7 @@ import React from "react";
 const Notifications = () => {
   return (
     <div className="px-4 pb-4 h-80 shadow-md bg-white rounded-lg flex overflow-y-scroll customScrollBar flex-col gap-4">
-      <div className=" flex py-4 bg-white z-40 justify-between sticky top-0 items-center">
+      <div className=" flex pt-4 bg-white z-40 justify-between sticky top-0 items-center">
         <span className="  font-medium tracking-wide">Notifications</span>
 
         <Link className=" text-xs text-blue-500" href={"/"}>
@@ -43,13 +43,14 @@ const Notifications = () => {
           </p>
         </div>
       </div>
+
       <div className=" flex gap-2 bg-gray-50 rounded-lg p-2 items-center">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="size-6 text-purple-500"
+            className="size-6 text-blue-500"
           >
             <path
               fillRule="evenodd"
@@ -83,7 +84,7 @@ const Notifications = () => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="size-6 text-green-500"
+            className="size-6 text-slate-500"
           >
             <path
               fillRule="evenodd"
@@ -111,7 +112,6 @@ const Notifications = () => {
           </p>
         </div>
       </div>
-
       <div className=" flex gap-2 bg-gray-50 rounded-lg p-2 items-center">
         <div>
           <svg
@@ -142,13 +142,14 @@ const Notifications = () => {
           </p>
         </div>
       </div>
+
       <div className=" flex gap-2 bg-gray-50 rounded-lg p-2 items-center">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="size-6 text-purple-500"
+            className="size-6 text-blue-500"
           >
             <path
               fillRule="evenodd"
@@ -171,41 +172,8 @@ const Notifications = () => {
           </div>
 
           <p className="text-sm">
-            <span className=" font-medium">Rex Atuzie</span> commented your post
-          </p>
-        </div>
-      </div>
-      <div className=" flex gap-2 bg-gray-50 rounded-lg p-2 items-center">
-        <div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="size-6 text-green-500"
-          >
-            <path
-              fillRule="evenodd"
-              d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </div>
-
-        <div className=" flex items-center gap-4">
-          <div className=" relative w-8 h-8">
-            <Image
-              src={
-                "https://images.pexels.com/photos/27241173/pexels-photo-27241173.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-              }
-              alt=""
-              fill
-              className=" object-cover  rounded-full"
-            />
-          </div>
-
-          <p className="text-sm ">
-            <span className=" font-medium text-black">Lucious Lyon</span>{" "}
-            followed you
+            <span className=" font-medium">Rex Atuzie</span> commented on your
+            post
           </p>
         </div>
       </div>

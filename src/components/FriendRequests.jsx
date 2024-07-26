@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const FriendRequests = () => {
-  const req = [1, 2, 3, 4];
+  const req = [1, 2, 3];
   return (
     <div className="p-4  shadow-md bg-white rounded-lg flex flex-col gap-4">
       <div className=" flex justify-between items-center">
@@ -29,10 +29,13 @@ const FriendRequests = () => {
                 />
               </div>
 
-              <p className=" font-medium">Micheal Faraday</p>
+              <div className=" flex flex-col">
+                <span className=" font-medium">Micheal Faraday</span>
+                <span className=" text-gray-500 text-xs">@mikeFudge</span>
+              </div>
             </div>
 
-            <button className=" text-sm  rounded-full px-4 py-2 bg-gray-100 ">
+            <button className=" text-sm  rounded-md text-white px-4 py-2 bg-black ">
               follow
             </button>
           </div>
