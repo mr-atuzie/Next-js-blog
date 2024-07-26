@@ -3,13 +3,11 @@ import Link from "next/link";
 import React from "react";
 
 const FriendRequests = () => {
-  const req = [1, 2, 3];
+  const req = [1, 2, 3, 4];
   return (
-    <div className="p-4 shadow-md bg-white rounded-lg flex flex-col gap-4">
+    <div className="p-4  shadow-md bg-white rounded-lg flex flex-col gap-4">
       <div className=" flex justify-between items-center">
-        <span className=" text-gray-500 font-semibold text-sm">
-          Who to follow
-        </span>
+        <span className=" tracking-wide font-medium">Who to follow</span>
 
         <Link className=" text-xs text-blue-500" href={"/"}>
           See all

@@ -21,6 +21,46 @@
   scrollbar-width: none; /* Firefox */
 }
 
+body::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scroll bar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scroll bar thumb color */
+  border-radius: 10px; /* Roundness of the scroll bar thumb */
+  border: 2px solid #f1f1f1; /* Border color */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Scroll bar thumb hover color */
+}
+
+.customScrollBar {
+  overflow-y: scroll;
+}
+
+.customScrollBar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.customScrollBar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.customScrollBar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+.customScrollBar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 body {
   @apply bg-slate-100;
 }
