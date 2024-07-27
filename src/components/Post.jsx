@@ -18,7 +18,11 @@ const Post = () => {
             />
           </div>
 
-          <p className=" font-medium">Jack Dorsey</p>
+          <div className=" flex gap-2 items-center">
+            <p className=" font-medium">Jack Dorsey</p>
+            <p className=" text-gray-500 text-sm">@Jacky_D</p>
+            <p className=" text-gray-500 text-sm">. 17m</p>
+          </div>
         </div>
 
         <button>
@@ -38,6 +42,12 @@ const Post = () => {
           </svg>
         </button>
       </div>
+      <p className=" text-sm">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas magnam
+        amet suscipit dolor dolore eligendi voluptatem, impedit modi placeat
+        ratione quibusdam quod odit eaque expedita earum. Perferendis aliquid
+        inventore minus!
+      </p>
       <div className=" flex flex-col gap-4">
         <div className=" w-full min-h-96 relative">
           <Image
@@ -49,12 +59,6 @@ const Post = () => {
             className="object-cover rounded-md"
           />
         </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas magnam
-          amet suscipit dolor dolore eligendi voluptatem, impedit modi placeat
-          ratione quibusdam quod odit eaque expedita earum. Perferendis aliquid
-          inventore minus!
-        </p>
       </div>
       {/* interaction */}
       <div className=" flex items-center text-sm justify-between my-2.5">
