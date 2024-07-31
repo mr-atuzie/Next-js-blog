@@ -5,12 +5,12 @@ import Feed from "@/components/Feed";
 import LeftMenu from "@/components/LeftMenu";
 import RightMenu from "@/components/RightMenu";
 import Stories from "@/components/Stories";
-import { getPost } from "../../lib/api/post";
+
 import axios from "axios";
 
 const Home = async () => {
-  const posts = await getPost();
-  console.log(posts);
+  // const posts = await getPost();
+  // console.log(posts);
 
   return (
     <div className=" flex gap-6 pt-6">
