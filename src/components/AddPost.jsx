@@ -1,7 +1,26 @@
+import { createPost } from "@/services/post";
 import Image from "next/image";
 import React from "react";
 
 const AddPost = () => {
+  const handleSubmit = async () => {
+    const formData = {
+      desc: "My mom is a good woman",
+    };
+
+    const res = await createPost(formData);
+
+    console.log(res);
+
+    if (res?.error) {
+      console.log(res?.error);
+    }
+
+    if (res?.message) {
+      console.log(res?.message);
+    }
+  };
+
   return (
     <div className=" p-4 shadow-md bg-white rounded-lg flex gap-4  justify-between text-sm">
       <div className=" relative w-12 h-12">
