@@ -1,12 +1,30 @@
+"use server";
+
 import { User } from "@/models/user";
 import jwt from "jsonwebtoken";
-import Cookie from "js-cookie";
+import Cookies from "js-cookie";
+import { connectDB } from "@/lib/db";
 
-export const createUser = async () => {
+const getErrorMsg = (error) => {
+  let message;
+
+  if (error instanceof Error) {
+    message = error.message;
+  } else if (error && typeof error === "object" && "message" in error) {
+    message = String(error.message);
+  } else if (typeof error === "string") {
+    message = error;
+  } else {
+    message = "Something went wrong";
+  }
+
+  return message;
+};
+
+export const createUser = async (formData) => {
   const { firstname, lastname, username, password, email } = formData;
+  await connectDB();
   try {
-    await connectDB();
-
     if (!firstname || !lastname || !username || !email || !password) {
       return { error: "Please fill up all fields." };
     }
@@ -26,13 +44,10 @@ export const createUser = async () => {
       expiresIn: "1h",
     });
 
-    Cookie.set("token", token, {
-      expires: 7,
-      secure: true,
-      sameSite: "Strict",
+    return JSON.stringify({
+      user,
+      token,
     });
-
-    return JSON.stringify({ user, token });
   } catch (error) {
     console.log(getErrorMsg(error));
     console.log(error);
