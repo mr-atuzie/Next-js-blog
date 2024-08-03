@@ -3,6 +3,7 @@
 import Cookies from "js-cookie";
 import { createUser } from "@/services/user";
 import Link from "next/link";
+import { GiSeagull } from "react-icons/gi";
 
 const RegisterPage = () => {
   const handleRegister = async () => {
@@ -41,11 +42,19 @@ const RegisterPage = () => {
 
   return (
     <div className="h-full w-full flex justify-center items-center">
-      <form className=" flex gap-4 flex-col lg:w-[45%] my-20  mx-auto bg-white rounded-md shadow-md p-4 lg:p-8 ">
+      <form className=" flex gap-6 flex-col lg:w-[40%] my-20  mx-auto bg-white rounded-md shadow-md p-4 lg:p-8 ">
+        <div className="flex items-center  gap-2">
+          <div className=" bg-gray-50 p-2 rounded-md">
+            <GiSeagull size={20} />
+          </div>
+
+          <h1 className=" font-semibold">Seagull</h1>
+        </div>
+
         <div>
           <h1 className="font-bold text-2xl">Create account</h1>
           <p className="text-sm text-gray-500">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Join our community and share event,we got you
           </p>
         </div>
 
