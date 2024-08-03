@@ -4,6 +4,7 @@ import { User } from "@/models/user";
 import jwt from "jsonwebtoken";
 import Cookies from "js-cookie";
 import { connectDB } from "@/lib/db";
+import bcrypt from "bcryptjs";
 
 const getErrorMsg = (error) => {
   let message;
@@ -22,10 +23,11 @@ const getErrorMsg = (error) => {
 };
 
 export const createUser = async (formData) => {
-  const { firstname, lastname, username, password, email } = formData;
+  const { name, username, password, email } = formData;
   await connectDB();
+
   try {
-    if (!firstname || !lastname || !username || !email || !password) {
+    if (!name || !username || !email || !password) {
       return { error: "Please fill up all fields." };
     }
 
@@ -37,7 +39,7 @@ export const createUser = async (formData) => {
     }
 
     // Create new user
-    const user = new User({ lastname, firstname, username, email, password });
+    const user = new User({ name, username, email, password });
     await user.save();
 
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
@@ -45,7 +47,48 @@ export const createUser = async (formData) => {
     });
 
     return JSON.stringify({
-      user,
+      token,
+    });
+  } catch (error) {
+    console.log(getErrorMsg(error));
+    console.log(error);
+
+    return {
+      error: getErrorMsg(error),
+    };
+  }
+};
+
+export const loginUser = async (formData) => {
+  const { username, password } = formData;
+  await connectDB();
+
+  try {
+    if (!username || !password) {
+      return { error: "Please fill up all fields." };
+    }
+
+    // Check if user already exists
+    const existingUser = await User.findOne({ username });
+
+    if (!existingUser) {
+      return { error: "User already exists." };
+    }
+
+    const confirmPassword = await bcrypt.compare(
+      password,
+      existingUser.password
+    );
+
+    if (!confirmPassword) {
+      return { error: "Inavalid credential, check username or password." };
+    }
+
+    const token = jwt.sign({ id: existingUser._id }, process.env.JWT_SECRET, {
+      expiresIn: "1h",
+    });
+
+    return JSON.stringify({
       token,
     });
   } catch (error) {

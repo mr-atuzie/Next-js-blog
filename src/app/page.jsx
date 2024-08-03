@@ -5,7 +5,6 @@ import Feed from "@/components/Feed";
 import LeftMenu from "@/components/LeftMenu";
 import RightMenu from "@/components/RightMenu";
 import Stories from "@/components/Stories";
-import { connectDB } from "@/lib/db";
 
 const Home = async () => {
   // const posts = await getPost();
